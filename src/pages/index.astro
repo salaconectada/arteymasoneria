@@ -42,20 +42,67 @@ import Layout from '../layouts/Layout.astro';
   </div>
 
 </section>
-  <!-- Galería Section -->
-  <section id="galeria" style="padding: 4rem; text-align: center; background-color: #f0f0f0;">
-    <h2>Galería</h2>
-    <p>Espacio para mostrar las fotografías participantes.</p>
-  </section>
 
-  <!-- Inscripción Section -->
+<!-- Sección Información del Concurso Estilo Grid 2 x 2 -->
+<section id="concurso" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; box-sizing: border-box;">
+
+  <!-- Título central -->
+  <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #333333;">Todo lo que debes saber para participar</h2>
+
+  <!-- Grid de elementos -->
+  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+
+    <!-- Descripción -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">¿En qué consiste?</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Participa en el 1er Concurso de Fotografía "Arte y Masonería" y comparte tu mirada sobre la ciudad y sus habitantes. El concurso promueve la creatividad y la diversidad cultural.
+      </p>
+    </div>
+
+    <!-- Fechas importantes -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Fechas Importantes</h3>
+      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
+        <li><strong>📅 Entrega:</strong> 3 al 7 de noviembre de 2025</li>
+        <li><strong>🗳️ Fallo:</strong> 10 de noviembre de 2025</li>
+        <li><strong>🏆 Premiación:</strong> 12 de noviembre de 2025</li>
+      </ul>
+    </div>
+
+    <!-- Premios -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Premios</h3>
+      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
+        <li>🥇 Primer lugar: $500.000</li>
+        <li>🥈 Segundo lugar: $300.000</li>
+        <li>🥉 Tercer lugar: $200.000</li>
+        <li>✨ 3 Menciones Honrosas</li>
+      </ul>
+    </div>
+
+    <!-- Organiza y patrocina -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Organiza y Patrocina</h3>
+      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
+        <li><strong>🎯 Organiza:</strong> Corporación Cultural y de Estudios David Stitchkin Branover</li>
+        <li><strong>🤝 Patrocina:</strong> Club de la Unión – Concepción</li>
+      </ul>
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- Sección Inscripción Mejorada -->
 <section id="inscripcion" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center;">
 
-  <!-- Contenedor padre con ancho controlado -->
-  <div style="display: flex; width: 100%; max-width: 1200px; box-sizing: border-box;">
+  <!-- Contenedor padre con ancho controlado y distribución flexible -->
+  <div style="display: flex; flex-wrap: wrap; width: 100%; max-width: 1200px; box-sizing: border-box; gap: 2rem;">
 
     <!-- Columna izquierda (60%) - Formulario -->
-    <div style="width: 60%; background-color: white; padding: 3rem 2rem; border-radius: 15px 0 0 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+    <div style="flex: 1 1 600px; background-color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
 
       <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #333333; text-align: center;">Formulario de Inscripción</h2>
 
@@ -101,27 +148,35 @@ import Layout from '../layouts/Layout.astro';
 
     </div>
 
-    <!-- Columna derecha (40%) - Invitación -->
-    <div style="width: 40%; background-color: #333333; color: white; padding: 3rem 2rem; border-radius: 0 15px 15px 0; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+    <!-- Columna derecha (40%) - Información de Inscripción -->
+<div style="flex: 1 1 350px; background-color: #333333; color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; text-align: left;">
 
-      <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">¡Te invitamos a participar!</h3>
+  <h3 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: left;">¿Prefieres inscribirte por correo?</h3>
 
-      <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
-        Comparte tu mirada sobre la ciudad y sus habitantes.  
-        Si deseas recibir más información y novedades sobre el concurso, déjanos tu correo.
-      </p>
+  <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; text-align: left;">
+    También puedes inscribirte enviando un correo a:
+  </p>
 
-      <form method="POST" action="#" style="display: flex; flex-direction: column; gap: 1rem;">
-        <input type="email" name="correo_suscripcion" placeholder="Tu correo electrónico" required style="padding: 0.75rem; border: none; border-radius: 8px;" />
-        <button type="submit" style="background-color: #E66A00; color: white; padding: 0.75rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background-color 0.3s;">
-          Suscribirme
-        </button>
-      </form>
+  <p style="font-size: 1.3rem; margin-bottom: 2rem; font-weight: bold; color: #E66A00; text-align: center;">
+    concurso@arteymasoneria.cl
+  </p>
 
-    </div>
+  <p style="font-size: 1.1rem; line-height: 1.6; text-align: left;">
+    Por favor incluye la siguiente información en tu correo:
+  </p>
 
-  </div>
+  <ul style="margin-top: 1rem; padding-left: 1.2rem; font-size: 1.1rem; line-height: 1.8;">
+    <li>✅ Nombre y Apellido</li>
+    <li>✅ Dirección</li>
+    <li>✅ Ciudad</li>
+    <li>✅ Teléfono</li>
+    <li>✅ Email</li>
+    <li>✅ Profesión</li>
+  </ul>
+
+</div>
 
 </section>
+
 
 </Layout>
