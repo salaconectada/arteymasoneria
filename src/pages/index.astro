@@ -1,11 +1,127 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Arte y Masonería - Concurso de Fotografía">
+
+  <!-- Hero Section -->
+<section id="inicio" style="position: relative; width: 100%; height: 50vh; background: url('/concepcion-bg.jpg') center center / cover no-repeat; display: flex; justify-content: center; align-items: center; text-align: center;">
+
+    <!-- Overlay oscuro -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.7);"></div>
+
+    <!-- Contenido del Hero -->
+    <div style="position: relative; z-index: 1; max-width: 800px; padding: 2rem; color: white;">
+      <h1 style="font-size: 3rem; margin-bottom: 1rem;">Concurso de Fotografía</h1>
+      <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #E66A00;">"La ciudad y sus habitantes"</h2>
+      <p style="max-width: 600px; width: 90%; font-size: 1.2rem; margin-bottom: 2rem;">
+        Abierto a toda la comunidad | Premios en efectivo | ¡Participa con tus mejores fotografías!
+      </p>
+      <a href="#bases" style="background-color: #E66A00; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.2rem;">
+        Quiero Participar
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Bases Section -->
+  <section id="bases" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
+
+  <div style="background-color: white; padding: 3rem 2rem; max-width: 700px; width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333333;">Bases del Concurso</h2>
+
+    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #555555;">
+      Conoce los requisitos y pasos para participar en nuestro concurso de fotografía.  
+      Es muy simple: revisa las bases, prepara tus mejores imágenes y entrega tus trabajos antes de la fecha límite.
+    </p>
+
+    <a href="/BASES_CONCURSO_DE_FOTOGRAFIA.pdf" download style="display: inline-flex; align-items: center; background-color: #E66A00; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.1rem; transition: background-color 0.3s;">
+      <img src="https://img.icons8.com/ios-filled/24/ffffff/pdf.png" alt="Descargar PDF" style="margin-right: 0.5rem;" />
+      Descargar Bases (PDF)
+    </a>
+  </div>
+
+</section>
+  <!-- Galería Section -->
+  <section id="galeria" style="padding: 4rem; text-align: center; background-color: #f0f0f0;">
+    <h2>Galería</h2>
+    <p>Espacio para mostrar las fotografías participantes.</p>
+  </section>
+
+  <!-- Inscripción Section -->
+<section id="inscripcion" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center;">
+
+  <!-- Contenedor padre con ancho controlado -->
+  <div style="display: flex; width: 100%; max-width: 1200px; box-sizing: border-box;">
+
+    <!-- Columna izquierda (60%) - Formulario -->
+    <div style="width: 60%; background-color: white; padding: 3rem 2rem; border-radius: 15px 0 0 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+
+      <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #333333; text-align: center;">Formulario de Inscripción</h2>
+
+      <form method="POST" action="#" style="display: flex; flex-direction: column; gap: 1.5rem;">
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="nombre" style="margin-bottom: 0.5rem;">Nombre y Apellido</label>
+          <input type="text" id="nombre" name="nombre" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="direccion" style="margin-bottom: 0.5rem;">Dirección</label>
+          <input type="text" id="direccion" name="direccion" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="telefono" style="margin-bottom: 0.5rem;">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="email" style="margin-bottom: 0.5rem;">Email</label>
+          <input type="email" id="email" name="email" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="profesion" style="margin-bottom: 0.5rem;">Profesión</label>
+          <input type="text" id="profesion" name="profesion" required style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;" />
+        </div>
+
+        <div style="display: flex; flex-direction: column;">
+          <label for="comentarios" style="margin-bottom: 0.5rem;">Comentarios Adicionales (Opcional)</label>
+          <textarea id="comentarios" name="comentarios" rows="4" style="padding: 0.75rem; border: 1px solid #ccc; border-radius: 8px;"></textarea>
+        </div>
+
+        <div style="text-align: center;">
+          <button type="submit" style="background-color: #E66A00; color: white; padding: 1rem 3rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1.1rem; transition: background-color 0.3s;">
+            Enviar Inscripción
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+    <!-- Columna derecha (40%) - Invitación -->
+    <div style="width: 40%; background-color: #333333; color: white; padding: 3rem 2rem; border-radius: 0 15px 15px 0; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center;">
+
+      <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">¡Te invitamos a participar!</h3>
+
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+        Comparte tu mirada sobre la ciudad y sus habitantes.  
+        Si deseas recibir más información y novedades sobre el concurso, déjanos tu correo.
+      </p>
+
+      <form method="POST" action="#" style="display: flex; flex-direction: column; gap: 1rem;">
+        <input type="email" name="correo_suscripcion" placeholder="Tu correo electrónico" required style="padding: 0.75rem; border: none; border-radius: 8px;" />
+        <button type="submit" style="background-color: #E66A00; color: white; padding: 0.75rem; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background-color 0.3s;">
+          Suscribirme
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
+
 </Layout>
