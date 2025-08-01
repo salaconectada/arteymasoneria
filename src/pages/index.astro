@@ -24,18 +24,19 @@ import Layout from '../layouts/Layout.astro';
 
   </section>
 
-  <!-- Bases Section -->
-  <section id="bases" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
+ <!-- Bases Section -->
+  
+<section id="bases" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
 
   <div style="background-color: white; padding: 3rem 2rem; max-width: 700px; width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
     <h2 style="font-size: 2rem; margin-bottom: 1rem; color: #333333;">Bases del Concurso</h2>
 
     <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #555555;">
-      Conoce los requisitos y pasos para participar en nuestro concurso de fotografía.  
+      Conoce los requisitos y pasos para participar en nuestro concurso de fotografía.<br />
       Es muy simple: revisa las bases, prepara tus mejores imágenes y entrega tus trabajos antes de la fecha límite.
     </p>
 
-    <a href="/BASES_CONCURSO_DE_FOTOGRAFIA.pdf" download style="display: inline-flex; align-items: center; background-color: #E66A00; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.1rem; transition: background-color 0.3s;">
+    <a href="/bases-concurso-2025.pdf" download style="display: inline-flex; align-items: center; background-color: #E66A00; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-size: 1.1rem; transition: background-color 0.3s;">
       <img src="https://img.icons8.com/ios-filled/24/ffffff/pdf.png" alt="Descargar PDF" style="margin-right: 0.5rem;" />
       Descargar Bases (PDF)
     </a>
@@ -49,8 +50,8 @@ import Layout from '../layouts/Layout.astro';
   <!-- Título central -->
   <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #333333;">Todo lo que debes saber para participar</h2>
 
-  <!-- Grid de elementos -->
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+  <!-- Grid de elementos 2 x 2 -->
+  <div class="grid-concurso" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
 
     <!-- Descripción -->
     <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
@@ -94,15 +95,23 @@ import Layout from '../layouts/Layout.astro';
 
 </section>
 
+<style>
+  @media (max-width: 768px) {
+    .grid-concurso {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
 
-  <!-- Sección Inscripción Mejorada -->
-<section id="inscripcion" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center;">
 
-  <!-- Contenedor padre con ancho controlado y distribución flexible -->
-  <div style="display: flex; flex-wrap: wrap; width: 100%; max-width: 1200px; box-sizing: border-box; gap: 2rem;">
+<!-- Sección Inscripción Responsiva -->
+<section id="inscripcion" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; box-sizing: border-box;">
 
-    <!-- Columna izquierda (60%) - Formulario -->
-    <div style="flex: 1 1 600px; background-color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
+  <!-- Contenedor padre -->
+  <div class="inscripcion-contenedor" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; max-width: 1200px; margin: 0 auto;">
+
+    <!-- Columna izquierda (Formulario) -->
+    <div class="formulario" style="flex: 1 1 500px; background-color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box;">
 
       <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: #333333; text-align: center;">Formulario de Inscripción</h2>
 
@@ -148,35 +157,44 @@ import Layout from '../layouts/Layout.astro';
 
     </div>
 
-    <!-- Columna derecha (40%) - Información de Inscripción -->
-<div style="flex: 1 1 350px; background-color: #333333; color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; text-align: left;">
+    <!-- Columna derecha (Información) -->
+    <div class="informacion" style="flex: 1 1 300px; background-color: #333333; color: white; padding: 3rem 2rem; border-radius: 15px; box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; text-align: left;">
 
-  <h3 style="font-size: 2rem; margin-bottom: 1.5rem; text-align: left;">¿Prefieres inscribirte por correo?</h3>
+      <h3 style="font-size: 2rem; margin-bottom: 1.5rem;">¿Prefieres inscribirte por correo?</h3>
 
-  <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6; text-align: left;">
-    También puedes inscribirte enviando un correo a:
-  </p>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+        También puedes inscribirte enviando un correo a:
+      </p>
 
-  <p style="font-size: 1.3rem; margin-bottom: 2rem; font-weight: bold; color: #E66A00; text-align: center;">
-    contacto@arteymasoneria.cl
-  </p>
+      <p style="font-size: 1.3rem; margin-bottom: 2rem; font-weight: bold; color: #E66A00; text-align: center;">
+        contacto@arteymasoneria.cl
+      </p>
 
-  <p style="font-size: 1.1rem; line-height: 1.6; text-align: left;">
-    Por favor incluye la siguiente información en tu correo:
-  </p>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Por favor incluye la siguiente información en tu correo:
+      </p>
 
-  <ul style="margin-top: 1rem; padding-left: 1.2rem; font-size: 1.1rem; line-height: 1.8;">
-    <li>✅ Nombre y Apellido</li>
-    <li>✅ Dirección</li>
-    <li>✅ Ciudad</li>
-    <li>✅ Teléfono</li>
-    <li>✅ Email</li>
-    <li>✅ Profesión</li>
-  </ul>
+      <ul style="margin-top: 1rem; padding-left: 1.2rem; font-size: 1.1rem; line-height: 1.8;">
+        <li>Nombre y Apellido</li>
+        <li>Dirección</li>
+        <li>Ciudad</li>
+        <li>Teléfono</li>
+        <li>Email</li>
+        <li>Profesión</li>
+      </ul>
 
-</div>
+    </div>
+
+  </div>
 
 </section>
 
+<style>
+  @media (max-width: 768px) {
+    .inscripcion-contenedor {
+      flex-direction: column;
+    }
+  }
+</style>
 
 </Layout>

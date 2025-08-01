@@ -1,11 +1,51 @@
-<header>
-  <img src="/logo.png" alt="Arte y Masonería" style="max-width: 200px; margin-bottom: 1rem;" />
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#bases">Bases</a>
-    <a href="#inscripcion">Inscripción</a>
-    <a href="/contacto">Contacto</a>
+<header style="background-color: #000000; color: white; padding: 1rem; text-align: center;">
+
+  <!-- Logo centrado -->
+  <img src="/logo.png" alt="Arte y Masonería" style="max-width: 200px; margin: 0 auto 1rem auto;" />
+
+  <!-- Menú hamburguesa -->
+  <input type="checkbox" id="menu-toggle" style="display: none;" />
+  <label for="menu-toggle" style="cursor: pointer; font-size: 2rem; user-select: none; display: none;" id="menu-icon">
+    ☰
+  </label>
+
+  <!-- Menú de navegación -->
+  <nav id="nav-links" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+    <a href="#inicio" style="color: white; text-decoration: none; font-size: 1.1rem;">Inicio</a>
+    <a href="#bases" style="color: white; text-decoration: none; font-size: 1.1rem;">Bases</a>
+    <a href="#inscripcion" style="color: white; text-decoration: none; font-size: 1.1rem;">Inscripción</a>
   </nav>
+
 </header>
 
+<style>
+  @media (max-width: 768px) {
 
+    /* Mostrar el icono hamburguesa */
+    #menu-icon {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    /* Ocultar el menú por defecto en móvil */
+    #nav-links {
+      display: none;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem;
+      background-color: #000000;
+      padding: 1rem 0;
+    }
+
+    /* Mostrar el menú cuando el checkbox está activo */
+    #menu-toggle:checked + label + #nav-links {
+      display: flex;
+    }
+
+    #nav-links a {
+      padding: 0.5rem 0.8rem;
+      text-align: center;
+      font-size: 1rem;
+    }
+  }
+</style>
