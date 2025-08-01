@@ -25,7 +25,7 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
  <!-- Bases Section -->
-  
+
 <section id="bases" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; display: flex; justify-content: center; align-items: center; box-sizing: border-box;">
 
   <div style="background-color: white; padding: 3rem 2rem; max-width: 700px; width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); text-align: center;">
@@ -44,55 +44,63 @@ import Layout from '../layouts/Layout.astro';
 
 </section>
 
-<!-- Sección Información del Concurso Estilo Grid 2 x 2 -->
+<!-- Sección Información del Concurso Estilo Grid Actualizado -->
 <section id="concurso" style="width: 100%; background-color: #f4f4f4; padding: 6rem 2rem; box-sizing: border-box;">
 
-  <!-- Título central -->
   <h2 style="text-align: center; font-size: 2.8rem; margin-bottom: 3rem; color: #333333;">Todo lo que debes saber para participar</h2>
 
-  <!-- Grid de elementos 2 x 2 -->
-  <div class="grid-concurso" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
 
-    <!-- Descripción -->
-    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="color: #E66A00; margin-bottom: 1rem;">¿En qué consiste?</h3>
+    <!-- Participantes -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">¿Quiénes pueden participar?</h3>
       <p style="font-size: 1.1rem; line-height: 1.6;">
-        Participa en el 1er Concurso de Fotografía "Arte y Masonería" y comparte tu mirada sobre la ciudad y sus habitantes. El concurso promueve la creatividad y la diversidad cultural.
+        Personas mayores de 18 años residentes en Chile. No pueden participar miembros del jurado ni del comité organizador.
       </p>
     </div>
 
-    <!-- Fechas importantes -->
-    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="color: #E66A00; margin-bottom: 1rem;">Fechas Importantes</h3>
-      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
-        <li><strong>📅 Entrega:</strong> 3 al 7 de noviembre de 2025</li>
-        <li><strong>🗳️ Fallo:</strong> 10 de noviembre de 2025</li>
-        <li><strong>🏆 Premiación:</strong> 12 de noviembre de 2025</li>
-      </ul>
+    <!-- Temática y Formato -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Temática y Formato</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        El tema es <strong>“La ciudad y sus habitantes”</strong>. Hasta 4 fotos originales, en JPG, sin montajes. Solo ajustes básicos.
+      </p>
     </div>
 
-    <!-- Premios -->
-    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="color: #E66A00; margin-bottom: 1rem;">Premios</h3>
-      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
+    <!-- Inscripción y Pago -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Inscripción y Forma de Pago</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Costo: <strong>$5.000</strong>. Plazo: hasta el <strong>30 de septiembre de 2025</strong>.
+        <br/><br/>
+        Titular: <strong>Corporación Cultural David Stitchkin</strong><br/>
+        BancoEstado / Cta. Cte. <strong>52700220842</strong><br/>
+        RUT: 65.142.175-6<br/>
+        Email: <a href="mailto:contacto@arteymasoneria.cl" style="color:#E66A00;">contacto@arteymasoneria.cl</a>
+      </p>
+    </div>
+
+    <!-- Entrega de Fotografías -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Entrega de Fotografías</h3>
+      <p style="font-size: 1.1rem; line-height: 1.6;">
+        Hasta el <strong>24 de octubre de 2025</strong> (23:59 hrs) al correo <strong>contacto@arteymasoneria.cl</strong>, incluyendo fotografías en JPG, datos personales, comprobante de pago y declaración firmada.
+      </p>
+    </div>
+
+    <!-- Premios y Fallo -->
+    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+      <h3 style="color: #E66A00; margin-bottom: 1rem;">Premios y Jurado</h3>
+      <ul style="font-size: 1.1rem; line-height: 1.8; padding-left: 1rem;">
         <li>🥇 Primer lugar: $500.000</li>
         <li>🥈 Segundo lugar: $300.000</li>
         <li>🥉 Tercer lugar: $200.000</li>
         <li>✨ 3 Menciones Honrosas</li>
       </ul>
-    </div>
-
-    <!-- Organiza y patrocina -->
-    <div style="background-color: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center;">
-      <h3 style="color: #E66A00; margin-bottom: 1rem;">Organiza y Patrocina</h3>
-      <ul style="list-style: none; padding: 0; font-size: 1.1rem; line-height: 1.8; text-align: left;">
-        <li><strong>🎯 Organiza:</strong> Corporación Cultural y de Estudios David Stitchkin Branover</li>
-        <li><strong>🤝 Patrocina:</strong> Club de la Unión – Concepción</li>
-      </ul>
+      <p style="margin-top: 1rem;">El fallo será comunicado el <strong>10 de noviembre</strong> y la premiación será el <strong>12 de noviembre de 2025</strong> en Club de la Unión, Castellón 560, Concepción.</p>
     </div>
 
   </div>
-
 </section>
 
 <style>
