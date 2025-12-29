@@ -253,29 +253,32 @@ flex-direction: column;
 </style>
 
 <script>
-  const slides = document.querySelectorAll('.slide');
   const track = document.querySelector('.carousel-track');
-  const next = document.querySelector('.next');
-  const prev = document.querySelector('.prev');
+  const slides = Array.from(document.querySelectorAll('.slide'));
+  const nextBtn = document.querySelector('.nav.next');
+  const prevBtn = document.querySelector('.nav.prev');
 
-  let index = 0;
+  let currentIndex = 0;
 
-  function update() {
-    slides.forEach((s, i) => {
-      s.classList.toggle('active', i === index);
+  function updateCarousel() {
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === currentIndex);
     });
-    track.style.transform = `translateX(-${index * 100}%)`;
+
+    const slideWidth = slides[0].offsetWidth;
+    track.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
   }
 
-  next.addEventListener('click', () => {
-    index = (index + 1) % slides.length;
-    update();
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
   });
 
-  prev.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    update();
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    updateCarousel();
   });
 
-  update();
+  window.addEventListener('resize', updateCarousel);
 </script>
+
